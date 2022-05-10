@@ -4,15 +4,14 @@ I've been doing some work with [Pulumi](https://www.pulumi.com) lately, so I fig
 
 ## Prerequisites
 - `python` (3.7)
-- `npm`
 
-Service account used needs to have the `roles/storage.objectAdmin` role added. 
+
 
 
 ## Setup
 - install packages
-```
-npm install
+`
+
 ```
 
 - authenticate to GCP
