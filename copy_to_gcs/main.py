@@ -9,13 +9,13 @@ def copy_to_gcs(event, context):
     print('File: {}'.format(event['name']))
 
     storage_client = storage.Client()
-    source_bucket = storage_client.bucket(event['bucket'])
+    source_bucket = storage_client.bucket(event['exyon_bucket'])
     source_blob = source_bucket.blob(event['name'])
 
     # split on '-' and drop location identifier ('mtl')
     temp_bucket_name = event['bucket'].split('-')[:-1]
     # add 'tor' to the list and rejoin on '-'
-    temp_bucket_name.append('tor')
+    temp_bucket_name.append('exyon_bucket_prod')
     destination_bucket_name = '-'.join(temp_bucket_name)
 
     destination_bucket = storage_client.bucket(destination_bucket_name)
