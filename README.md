@@ -4,7 +4,7 @@ I've been doing some work with [Pulumi](https://www.pulumi.com) lately, so I fig
 
 ## Prerequisites
 - `pulumi`
-- `node` (version 14+)
+- `python` (3.7)
 - `npm`
 
 Service account used needs to have the `roles/storage.objectAdmin` role added. 
@@ -16,9 +16,8 @@ Service account used needs to have the `roles/storage.objectAdmin` role added.
 npm install
 ```
 
-- authenticate to GCP & Pulumi
+- authenticate to GCP
 ```
 gcloud auth application-default login
-pulumi login gs://[MY_PULUMI_STATE_GCS_BUCKET]
 ```
 
