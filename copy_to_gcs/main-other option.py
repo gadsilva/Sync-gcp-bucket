@@ -1,4 +1,4 @@
-proc = subprocess.Popen(["gsutil", "-m", "rsync", "s3://input", "gs://output"])
+proc = subprocess.Popen(["gsutil", "-m", "rsync", "gs://exyon_bucket/", "gs://exyon_bucket_prod/"])
 try:
     outs, errs = proc.communicate(timeout=15)
     # now you can do something with the text in outs and errs
