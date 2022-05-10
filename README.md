@@ -3,7 +3,6 @@ I've been doing some work with [Pulumi](https://www.pulumi.com) lately, so I fig
 
 
 ## Prerequisites
-- `pulumi`
 - `python` (3.7)
 - `npm`
 
